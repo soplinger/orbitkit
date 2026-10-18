@@ -1,0 +1,8 @@
+# LEO parking orbit to geostationary, with a coast and a plane trim
+body earth
+orbit circular 200        # 200 km parking orbit
+hohmann 35786             # to geostationary altitude
+wait 2                    # coast before the trim
+planechange 0.1           # small plane correction
+vehicle 320 1500          # Isp in seconds, dry mass in kg
+budget 4.5                # mission delta-v limit, km/s
